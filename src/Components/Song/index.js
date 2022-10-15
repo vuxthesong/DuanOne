@@ -5,10 +5,10 @@ import classNames from 'classnames/bind';
 import styles from './Song.module.scss';
 const cx = classNames.bind(styles);
 
-function Song({ id, title, author, className }) {
-    const handlePlay = () => {};
+function Song({ id, title, author, onClick, check }) {
+    // console.log(check);
     return (
-        <div className={cx('wapper')} onClick={() => handlePlay()}>
+        <div className={cx('wrapper', { active: check })} onClick={onClick}>
             <div className={cx('id')}>{id}</div>
             <div className={cx('title')}>{title}</div>
             <div className={cx('author')}>{author}</div>

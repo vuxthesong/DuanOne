@@ -11,9 +11,12 @@ const cx = classNames.bind(styles);
 
 function ListSong() {
     const ListSong = useContext(Songs);
-    const [idSong, setidSong] = useState(1);
+    const [idSong, setidSong] = useState('0');
+
+    // console.log(idSong);
+
     return (
-        <table className={cx('wrapper')}>
+        <div className={cx('wrapper')}>
             <div className={cx('header')}>
                 <div className={cx('id')}>#</div>
                 <div className={cx('title')}>Title</div>
@@ -24,10 +27,17 @@ function ListSong() {
             </div>
             <div className={cx('list-song')}>
                 {ListSong.map((song) => (
-                    <Song id={song.id} title={song.name} author={song.author} />
+                    <Song
+                        check={idSong === song.id}
+                        key={song.id}
+                        id={song.id}
+                        title={song.name}
+                        author={song.author}
+                        onClick={() => setidSong(song.id)}
+                    />
                 ))}
             </div>
-        </table>
+        </div>
     );
 }
 

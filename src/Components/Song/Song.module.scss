@@ -1,4 +1,4 @@
-.wapper{
+.wrapper{
 
     min-height: 48px;
     justify-content: space-between;
@@ -7,8 +7,8 @@
     background-color: #1e293b;
     color: white;
     font-size: 18px;
-    font-weight:bold;
     padding: 0px 32px;
+    cursor: pointer;
 
     display: grid;
     grid-template-columns: 5% 70% 20% 5%;
