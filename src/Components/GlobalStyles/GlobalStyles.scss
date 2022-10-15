@@ -1,0 +1,26 @@
+@import 'normalize.css';
+
+:root {
+    --primary: #fe2c55;
+    --white :#ffffff;
+    --black : #000000;
+
+    --height : calc(100vh - 10rem - 9rem);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+

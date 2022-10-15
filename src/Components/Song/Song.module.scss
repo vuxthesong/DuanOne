@@ -1,0 +1,29 @@
+.wapper{
+
+    min-height: 48px;
+    justify-content: space-between;
+    align-items: center;
+    height: 48px;
+    background-color: #1e293b;
+    color: white;
+    font-size: 18px;
+    font-weight:bold;
+    padding: 0px 32px;
+
+    display: grid;
+    grid-template-columns: 5% 70% 20% 5%;
+    
+    &:hover{
+        background:#475569;
+    }
+}
+
+.down{
+    text-align: right;
+}
+
+.active{
+    color: aquamarine;
+    background:#475569;
+}
+

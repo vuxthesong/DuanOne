@@ -1,0 +1,60 @@
+.wrapper{
+    padding: 12px;
+    height: 100%;
+    width: calc(100%/3);
+    background-color:#334155;
+    ;
+
+}   
+.now{
+    color: #38bdf8;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.name-song{
+    color: #a3a3a3;
+    font-size: 24px;
+}
+
+.img{
+    max-height: 256px;
+    max-width: 256px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.info{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    padding-top: 40px;
+    margin-top: 20px;
+
+
+}
+
+.info1{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    padding: auto;
+    margin-top: 20px;
+}
+
+.avarta{
+    max-height: 64px;
+    max-width: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+    
+}
+
+.author{
+    color: white;
+    font-size: 20px;
+}
+;;
