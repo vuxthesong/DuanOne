@@ -1,26 +1,22 @@
 import classNames from 'classnames/bind';
+import { useContext } from 'react';
 import styles from './DetailSong.module.scss';
+import { Songs } from '~/Context';
+
 const cx = classNames.bind(styles);
 
 function DetailSong() {
+    const { song } = useContext(Songs);
     return (
         <div className={cx('wrapper')}>
             <div className={cx('now')}>Now Playing</div>
-            <div className={cx('name-song')}>Name Song</div>
+            <div className={cx('name-song')}>{song.name}</div>
             <div className={cx('info')}>
-                <img
-                    className={cx('img')}
-                    src="https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576"
-                    alt="s"
-                ></img>
+                <img className={cx('img')} src={song.links.images[0].url} alt="s"></img>
             </div>
             <div className={cx('info1')}>
-                <img
-                    className={cx('avarta')}
-                    src="https://i.scdn.co/image/ab67616d0000b273a108e07c661f9fc54de9c43a"
-                    alt="s"
-                ></img>
-                <div className={cx('author')}>Name Author</div>
+                <img className={cx('avatar')} src={song.links.images[1].url} alt="s"></img>
+                <div className={cx('author')}>{song.author}</div>
             </div>
         </div>
     );

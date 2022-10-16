@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleDown } from '@fortawesome/free-solid-svg-icons';
 import classNames from 'classnames/bind';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 
 import Song from '../Song';
 import styles from './ListSong.module.scss';
@@ -10,10 +10,20 @@ import { Songs } from '~/Context';
 const cx = classNames.bind(styles);
 
 function ListSong() {
-    const ListSong = useContext(Songs);
-    const [idSong, setidSong] = useState('0');
+    const { Data, handleSong, song } = useContext(Songs);
+    const ListSong = Data;
+    const [idSong, setidSong] = useState();
 
-    // console.log(idSong);
+    // console.log(Song);
+
+    const handlePlaySong = (idSong) => {
+        setidSong(idSong);
+        handleSong(idSong);
+    };
+
+    useEffect(() => {
+        setidSong(song.id);
+    }, [song]);
 
     return (
         <div className={cx('wrapper')}>
@@ -33,7 +43,7 @@ function ListSong() {
                         id={song.id}
                         title={song.name}
                         author={song.author}
-                        onClick={() => setidSong(song.id)}
+                        onClick={() => handlePlaySong(song.id)}
                     />
                 ))}
             </div>
