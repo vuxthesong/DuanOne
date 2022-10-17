@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/DuanOne/static/css/main.952ec2b9.css",
+    "main.js": "/DuanOne/static/js/main.a482238b.js",
+    "static/js/787.142da1d4.chunk.js": "/DuanOne/static/js/787.142da1d4.chunk.js",
+    "index.html": "/DuanOne/index.html",
+    "main.952ec2b9.css.map": "/DuanOne/static/css/main.952ec2b9.css.map",
+    "main.a482238b.js.map": "/DuanOne/static/js/main.a482238b.js.map",
+    "787.142da1d4.chunk.js.map": "/DuanOne/static/js/787.142da1d4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.952ec2b9.css",
+    "static/js/main.a482238b.js"
+  ]
+}
